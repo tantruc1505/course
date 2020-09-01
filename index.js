@@ -6,6 +6,7 @@ const {dataKhoaHoc} = require('./const/data');
 app.use(compression());
 
 const bodyParser = require('body-parser');
+const data = require('./const/data');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true,
@@ -60,7 +61,11 @@ app.post('/createCourse', function(req,res){
     const {id} = req.body
     console.log(id)
     app.get(`/course/${id}`, function(req,res){
-        res.render('indexDetailCourse');
+        const data = dataKhoaHoc.find( x => x.MaKhoaHoc == val.MaKhoaHoc)
+        if(!data){
+            return res.send("<p>404 not found!</p>")
+        }
+        return res.render('indexDetailCourse');
     })
     res.json({ok:'ok'})
 })
@@ -68,7 +73,11 @@ app.post('/createCourse', function(req,res){
 
 for(let val of dataKhoaHoc){
     app.get(`/course/${val.MaKhoaHoc}`, function(req,res){
-        res.render('indexDetailCourse');
+        const data = dataKhoaHoc.find( x => x.MaKhoaHoc == val.MaKhoaHoc)
+        if(!data){
+            return res.send("<p>404 not found!</p>")
+        }
+        return res.render('indexDetailCourse');
     })
 }
 
