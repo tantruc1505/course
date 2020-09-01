@@ -94,6 +94,10 @@ const dataUser = [
     }
 ]
 
+const apiURL = 'https://course.selflearning.app'
+// const apiURL = 'http://localhost:3500'
+
+
 
 
 const createData = () => {
@@ -132,4 +136,4 @@ const updateData = (type, data) => {
 
 
 
-module.exports = { dataKhoaHoc,createData, updateData, getData };
+module.exports = { dataKhoaHoc,createData, updateData, getData, apiURL };

@@ -1,7 +1,7 @@
 import DanhSachKhoaHoc from './DanhSachkhoaHoc';
 import {ServiceKhoaHoc} from './ServiceKhoaHoc';
 import KhoaHoc from '../Models/KhoaHoc';
-import { getData, updateData } from '../const/data';
+import { getData, updateData, apiURL } from '../const/data';
 import swal from 'sweetalert';
 
 let dskh = new DanhSachKhoaHoc();
@@ -66,7 +66,7 @@ function ThemKhoaHoc() {
     }
 
 
-    fetch('http://localhost:3500/createCourse', {
+    fetch(apiURL+'/createCourse', {
         method:'POST',
         headers: {
             'Content-Type': 'application/json'          
