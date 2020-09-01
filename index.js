@@ -61,7 +61,7 @@ app.post('/createCourse', function(req,res){
     const {id} = req.body
     console.log(id)
     app.get(`/course/${id}`, function(req,res){
-        const data = dataKhoaHoc.find( x => x.MaKhoaHoc == val.MaKhoaHoc)
+        const data = dataKhoaHoc.find( x => x.MaKhoaHoc == id)
         if(!data){
             return res.send("<p>404 not found!</p>")
         }
