@@ -58,7 +58,6 @@ app.get('/course', function(req,res){
 
 app.post('/createCourse', function(req,res){
     const {id} = req.body
-    console.log(id)
     app.get(`/course/${id}`, function(req,res){
         res.render('indexDetailCourse');
     })

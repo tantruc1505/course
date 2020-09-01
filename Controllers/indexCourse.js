@@ -54,7 +54,6 @@ function loadList(list)
     {
         let value = list.mangKhoaHoc[i];
 
-        console.log("Loadlist: ",value.MaKhoaHoc)
 
         if(value.MaKhoaHoc !== ""){
 

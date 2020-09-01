@@ -1,30 +1,30 @@
 import {dataKhoaHoc, updateData} from "../const/data";
 
-const load = function () {
-    (function () {
-        if (window.localStorage) {
-            if (!localStorage.getItem('firstLoad')) {
-                localStorage['firstLoad'] = true;
-                window.location.reload();
-            }
-            else
-                localStorage.removeItem('firstLoad');
-        }
-    })();
+// const load = function () {
+//     (function () {
+//         if (window.localStorage) {
+//             if (!localStorage.getItem('firstLoad')) {
+//                 localStorage['firstLoad'] = true;
+//                 window.location.reload();
+//             }
+//             else
+//                 localStorage.removeItem('firstLoad');
+//         }
+//     })();
 
-}
+// }
 
-const load2 = function () {
-    window.onload = function () {
-        //considering there aren't any hashes in the urls already
-        if (!window.location.hash) {
-            //setting window location
-            window.location = window.location + '#loaded';
-            //using reload() method to reload web page
-            window.location.reload();
-        }
-    }
-}
+// const load2 = function () {
+//     window.onload = function () {
+//         //considering there aren't any hashes in the urls already
+//         if (!window.location.hash) {
+//             //setting window location
+//             window.location = window.location + '#loaded';
+//             //using reload() method to reload web page
+//             window.location.reload();
+//         }
+//     }
+// }
 
 const ServiceKhoaHoc = function () {
     
@@ -70,7 +70,6 @@ const ServiceKhoaHoc = function () {
             localStorage.setItem('ChiTietKhoaHoc', jsonCourseDetails);
             location.href = `/course/${id}`;
         }
-        
     }
 
     this.ThemKhoaHoc = function (khoahoc) {
@@ -161,7 +160,7 @@ const ServiceKhoaHoc = function () {
                     console.log(dskh)
                     updateData('dskh',dskh)
 
-                    load();
+                    // load();
                     window.location.reload();
                 } 
             });
