@@ -33,8 +33,8 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'build'),
         publicPath : '/',
-        filename: '[name].js',
-        chunkFilename: '[id].js'
+        filename: '[name].[contenthash].js',
+        publicPath: '/course/',
     },
     module: {
         rules: [
