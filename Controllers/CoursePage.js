@@ -1,4 +1,4 @@
-import DanhSachKhoaHoc from './DanhSachKhoaHoc';
+import DanhSachKhoaHoc from './DanhSachkhoaHoc';
 import DanhSachHinhAnh from './DanhSachHinhAnh';
 import {ServiceKhoaHoc} from './ServiceKhoaHoc'
 import HinhAnh1 from '../Models/HinhAnh'
