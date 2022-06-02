@@ -65,7 +65,6 @@ function ThemKhoaHoc() {
         });
     }
 
-    
     return swal({
         text: "Thêm khoá học thành công!",
         icon: "success",
@@ -73,9 +72,9 @@ function ThemKhoaHoc() {
     }).then((value) => {
         data.push(khoahoc)
         updateData('dskh',data);
+        window.location.reload()
     });
-
-
+   
     // dskh.ThemKhoaHoc(khoahoc);
     // service.ThemKhoaHoc(khoahoc);
 }
