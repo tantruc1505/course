@@ -9,10 +9,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<link href="/course/vendors.css" rel="stylesheet"><link href="/course/bundleRegister.css" rel="stylesheet"></head>
+
+<link href="/vendors.css" rel="stylesheet"><link href="/bundleLogin.css" rel="stylesheet"></head>
 
 <body>
-
 	<div id="headerTop">
 		<div class="container">
 			<div class="row">
@@ -51,6 +51,11 @@
 			<a class="navbar-brand" href="/">
 				<h1>Group One</h1>
 			</a>
+
+
+
+
+
 
 
 			<!-- Button Collapse -->
@@ -131,69 +136,47 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 wow fadeInLeft" data-wow-delay="0s">
+				<div class="col-lg-6 wow fadeInLeft loginDes" data-wow-delay="0s">
 
-					<h2>Register to Have the Access</h2>
+					<h2>Log in to Have the Access</h2>
 					<p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
 						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-					<a href="/login">
-						<button>Already have an Account?</button>
+					<a href="/register">
+						<button>Don't have an Account?</button>
 					</a>
 
 				</div>
 				<div class="col-lg-6 wow fadeInRight" data-wow-delay="0s">
-					<form id="registerform" method="POST">
-						<h1 class="text-center">Đăng Ký</h1>
+					<form id="loginform">
+						<h1 class="text-center">Đăng Nhập</h1>
 						<div class="row">
+
 							<div class="col-md-12">
 								<span>Tài Khoản</span>
 							</div>
+
 							<div class="col-md-12">
-								<input type="text" minlength="5" maxlength="15" class="taikhoan" id="taikhoan" name="taikhoan" placeholder="Tài khoản">
+								<input type="text" id="taikhoan" name="taikhoan" placeholder="Tài Khoản" required>
 							</div>
 
 							<div class="col-md-12">
-								<span>Mật Khẩu</span>
+								<span>Password</span>
 							</div>
 							<div class="col-md-12">
-								<input type="password" minlength="8" maxlength="15" id="matkhau" name="matkhau" placeholder="Mật khẩu">
+								<input type="password" id="password" name="password" placeholder="Mật Khẩu" required>
 							</div>
 
-							<div class="col-md-12">
-								<span>Nhập lại Mật Khẩu</span>
-							</div>
-							<div class="col-md-12">
-								<input type="password" minlength="8" maxlength="15" id="rematkhau" name="rematkhau" placeholder="Nhập lại Mật khẩu">
-							</div>
-
-							<div class="col-md-12">
-								<span>Họ Tên</span>
-							</div>
-							<div class="col-md-12">
-								<input type="text" minlength="4" maxlength="20" id="hoten" class="hoten" name="hoten" placeholder="Họ Tên">
-							</div>
-
-							<div class="col-md-12">
-								<span>Email</span>
-							</div>
-							<div class="col-md-12">
-								<input id="email" type="email" name="email" placeholder="Email">
-							</div>
-							<div class="col-md-12">
-								<span>Số Điện Thoại</span>
-							</div>
-							<div class="col-md-12">
-								<input type="number" minlength="10" maxlength="11" id="sodt" name="sodt" placeholder="Số Điện Thoại">
-							</div>
-							<div class="col-md-12 text-center mt-4">
-								<button type="submit" id="register">
+							<div class="text-center w-100 mt-4 mb-4">
+								<button type="submit" id="loginUser">
 									<div class="pr-1 preloader">
 										<div class="loader">
 											<span style="visibility:hidden">L</span>
 										</div>
 									</div>
-
-									Đăng Ký</button>
+									Đăng Nhập</button>
+							</div>
+							<div class="col-md-12 text-center">
+								<p>Quên Password?</p>
 							</div>
 						</div>
 					</form>
@@ -208,7 +191,7 @@
 		</button>
 	</footer>
 
-	
-<script type="text/javascript" src="/course/vendors.a0cdd23a8e580dcb74f2.js"></script><script type="text/javascript" src="/course/bundleRegister.e4fddd19ec4bb410a1c0.js"></script></body>
+
+<script type="text/javascript" src="/0.js"></script><script type="text/javascript" src="/bundleLogin.js"></script></body>
 
 </html>
