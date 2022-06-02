@@ -32,7 +32,6 @@ module.exports = {
 
     output: {
         path: path.join(__dirname, 'build'),
-        publicPath : '/',
         filename: '[name].[contenthash].js',
         publicPath: '/course/',
     },
@@ -133,7 +132,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             chunks: ['bundleUser', 'vendors'],
             template: './Views/indexUser.html',
-            filename: 'indexUser.html'
+            filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             chunks: ['bundleAdmin','vendors'],
@@ -153,7 +152,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             chunks: ['bundleCourse', 'vendors'],
             template: './Views/Course.html',
-            filename: 'index.html'
+            filename: 'indexCourse.html'
         }),
         new HtmlWebpackPlugin({
             chunks: ['bundleDetailCourse', 'vendors'],
