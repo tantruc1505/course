@@ -105,7 +105,7 @@ module.exports = {
             filename: 'indexUser.ejs'
         }),
         new HtmlWebpackPlugin({
-            chunks: ['bundleAdmin],
+            chunks: ['bundleAdmin'],
             template: './Views/indexAdmin.html',
             filename: 'indexAdmin.ejs'
         }),
