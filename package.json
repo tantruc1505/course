@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://tantruc1505.github.io/course",
   "scripts": {
     "build": "rm -rf build && webpack",
     "start": "node index.js",
