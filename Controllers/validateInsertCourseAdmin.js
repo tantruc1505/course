@@ -65,26 +65,17 @@ function ThemKhoaHoc() {
         });
     }
 
-
-    fetch(apiURL+'/createCourse', {
-        method:'POST',
-        headers: {
-            'Content-Type': 'application/json'          
-        },
-        body: JSON.stringify({id})
-    }).then(res => {
+    
+    return swal({
+        text: "Thêm khoá học thành công!",
+        icon: "success",
+        button: "OK",
+    }).then((value) => {
         data.push(khoahoc)
         updateData('dskh',data);
-        return swal({
-            text: "Thêm khoá học thành công!",
-            icon: "success",
-            button: "OK",
-        }).then((value) => {
-            window.location.reload()
-        });
-    })
+    });
 
-   
+
     // dskh.ThemKhoaHoc(khoahoc);
     // service.ThemKhoaHoc(khoahoc);
 }
