@@ -32,8 +32,9 @@ module.exports = {
 
     output: {
         path: path.join(__dirname, 'build'),
-        filename: '[name].[contenthash].js',
-        publicPath: '/course/',
+        publicPath : '/',
+        filename: '[name].js',
+        chunkFilename: '[id].js'
     },
     module: {
         rules: [
@@ -132,37 +133,37 @@ module.exports = {
         new HtmlWebpackPlugin({
             chunks: ['bundleUser', 'vendors'],
             template: './Views/indexUser.html',
-            filename: 'index.html'
+            filename: 'indexUser.ejs'
         }),
         new HtmlWebpackPlugin({
             chunks: ['bundleAdmin','vendors'],
             template: './Views/indexAdmin.html',
-            filename: 'indexAdmin.html'
+            filename: 'indexAdmin.ejs'
         }),
         new HtmlWebpackPlugin({
             chunks: ['bundleLogin', 'vendors'],
             template: './Views/login.html',
-            filename: 'indexLogin.html'
+            filename: 'indexLogin.ejs'
         }),
         new HtmlWebpackPlugin({
             chunks: ['bundleRegister', 'vendors'],
             template: './Views/register.html',
-            filename: 'indexRegister.html'
+            filename: 'indexRegister.ejs'
         }),
         new HtmlWebpackPlugin({
             chunks: ['bundleCourse', 'vendors'],
             template: './Views/Course.html',
-            filename: 'indexCourse.html'
+            filename: 'indexCourse.ejs'
         }),
         new HtmlWebpackPlugin({
             chunks: ['bundleDetailCourse', 'vendors'],
             template: './Views/detailCourse.html',
-            filename: 'indexDetailCourse.html'
+            filename: 'indexDetailCourse.ejs'
         }),
         new HtmlWebpackPlugin({
             chunks: ['bundleUserDetail', 'vendors'],
             template: './Views/userDetail.html',
-            filename: 'userDetail.html'
+            filename: 'userDetail.ejs'
         }),
         // Extract CSS ra khoi bundle thanh file rieng
         new MiniCssExtractPlugin({

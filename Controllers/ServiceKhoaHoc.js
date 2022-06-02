@@ -63,12 +63,12 @@ const ServiceKhoaHoc = function () {
             const res = data.find(x => x.MaKhoaHoc === id)
             var jsonCourseDetails = JSON.stringify(res);
             localStorage.setItem('ChiTietKhoaHoc', jsonCourseDetails);
-            location.href = `./indexDetailCourse.html/${id}`;
+            location.href = `/course/${id}`;
         } else {
             const res = dataKhoaHoc.find(x => x.MaKhoaHoc === id)
             var jsonCourseDetails = JSON.stringify(res);
             localStorage.setItem('ChiTietKhoaHoc', jsonCourseDetails);
-            location.href = `./indexDetailCourse.html/${id}`;
+            location.href = `/course/${id}`;
         }
     }
 
