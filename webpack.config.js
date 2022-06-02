@@ -3,7 +3,6 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -101,12 +100,6 @@ module.exports = {
         // },
 
         minimizer: [
-            // minify js
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                extractComments: true,
-            }),
             // minify css
             new OptimizeCSSAssetsPlugin({
                 cssProcessorPluginOptions: {
