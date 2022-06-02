@@ -8,14 +8,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 
-const vendor_lib = [
-    "bootstrap",
-    "jquery",
-    "popper.js",
-    "wow.js"
-]
-
-
 module.exports = {
     entry: {
         bundleUser: './Controllers/indexUser.js',
@@ -25,7 +17,6 @@ module.exports = {
         bundleCourse: './Controllers/Course.js',
         bundleDetailCourse: './Controllers/detailCourse.js',
         bundleUserDetail: './Controllers/userDetail.js',
-        vendors: vendor_lib
     },
 
     output: {
@@ -109,37 +100,37 @@ module.exports = {
 
         // parse template duoi khac thanh HTML
         new HtmlWebpackPlugin({
-            chunks: ['bundleUser', 'vendors'],
+            chunks: ['bundleUser'],
             template: './Views/indexUser.html',
             filename: 'indexUser.ejs'
         }),
         new HtmlWebpackPlugin({
-            chunks: ['bundleAdmin','vendors'],
+            chunks: ['bundleAdmin],
             template: './Views/indexAdmin.html',
             filename: 'indexAdmin.ejs'
         }),
         new HtmlWebpackPlugin({
-            chunks: ['bundleLogin', 'vendors'],
+            chunks: ['bundleLogin'],
             template: './Views/login.html',
             filename: 'indexLogin.ejs'
         }),
         new HtmlWebpackPlugin({
-            chunks: ['bundleRegister', 'vendors'],
+            chunks: ['bundleRegister'],
             template: './Views/register.html',
             filename: 'indexRegister.ejs'
         }),
         new HtmlWebpackPlugin({
-            chunks: ['bundleCourse', 'vendors'],
+            chunks: ['bundleCourse'],
             template: './Views/Course.html',
             filename: 'indexCourse.ejs'
         }),
         new HtmlWebpackPlugin({
-            chunks: ['bundleDetailCourse', 'vendors'],
+            chunks: ['bundleDetailCourse'],
             template: './Views/detailCourse.html',
             filename: 'indexDetailCourse.ejs'
         }),
         new HtmlWebpackPlugin({
-            chunks: ['bundleUserDetail', 'vendors'],
+            chunks: ['bundleUserDetail'],
             template: './Views/userDetail.html',
             filename: 'userDetail.ejs'
         }),
