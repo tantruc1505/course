@@ -221,5 +221,5 @@ const hideloader = function () {
 }
 
 export {
-    load, load2, ServiceKhoaHoc
+    ServiceKhoaHoc
 }
